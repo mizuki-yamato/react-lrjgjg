@@ -3,13 +3,23 @@ import './style.css';
 import { PrimaryButton } from './components/atom/button/PrimaryButton';
 import { SecondaryButton } from './components/atom/button/SecondaryButton';
 import { SearchInput } from './components/molecules/SearchInput';
+import { UserCard } from './components/organisms/user/UserCard';
+
+const user = {
+  image: 'https://source.unsplash.com/2l0CWTpcChI',
+  name: 'テスト太郎',
+  email: '12345@example.com',
+  phone: '03-1234-5678',
+  company: {
+    name: 'ああああ株式会社'
+  }
+};
 
 export default function App() {
   return (
     <div>
-      <h1>Hello StackBlitz!</h1>
-      <p>Start editing to see some magic happen :)</p>
       <SearchInput />
+      <UserCard user={user} />
     </div>
   );
 }
