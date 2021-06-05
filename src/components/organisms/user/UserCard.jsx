@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import {Card} from "../../atoms/card/Card";
+import {UserIconWithName} from "../../molecules/user/UserIconWithName";
 
 export const UserCard = (props) => {
   const {user} = props;
   return (
     <Card>
-      <img height={160} width={160} alt="プロフィール" src="https://source.unsplash.com/2l0CWTpcChI"/>
-      <p>{user.name}</p>
+      <UserIconWithName name={user.name} image={user.image}/>
       <SDl>
         <dt>メール</dt>
         <dd>{user.email}</dd>
@@ -29,5 +29,6 @@ const SDl = styled.dl`
   dd {
     padding-left: 30px;
     padding-bottom: 8px;
+    overflow-wrap: break-word;
   }
 `;
