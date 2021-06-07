@@ -4,7 +4,7 @@ import { PrimaryButton } from './components/atom/button/PrimaryButton';
 import { SecondaryButton } from './components/atom/button/SecondaryButton';
 import { SearchInput } from './components/molecules/SearchInput';
 import { UserCard } from './components/organisms/user/UserCard';
-import { HeaderOnly } from './components/templates/HeaderOnly';
+import { DefaultLayout } from './components/templates/DefaultLayout';
 import { BrowserRouter } from 'react-router-dom';
 
 const user = {
@@ -20,10 +20,10 @@ const user = {
 export default function App() {
   return (
     <BrowserRouter>
-      <HeaderOnly>
+      <DefaultLayout>
         <SearchInput />
         <UserCard user={user} />
-      </HeaderOnly>
+      </DefaultLayout>
     </BrowserRouter>
   );
 }
