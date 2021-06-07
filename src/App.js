@@ -5,6 +5,7 @@ import { SecondaryButton } from './components/atom/button/SecondaryButton';
 import { SearchInput } from './components/molecules/SearchInput';
 import { UserCard } from './components/organisms/user/UserCard';
 import { HeaderOnly } from './components/templates/HeaderOnly';
+import { BrowserRouter } from 'react-router-dom';
 
 const user = {
   image: 'https://source.unsplash.com/2l0CWTpcChI',
@@ -18,9 +19,11 @@ const user = {
 
 export default function App() {
   return (
-    <HeaderOnly>
-      <SearchInput />
-      <UserCard user={user} />
-    </HeaderOnly>
+    <BrowserRouter>
+      <HeaderOnly>
+        <SearchInput />
+        <UserCard user={user} />
+      </HeaderOnly>
+    </BrowserRouter>
   );
 }
