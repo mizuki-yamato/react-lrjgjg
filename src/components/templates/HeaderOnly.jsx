@@ -5,8 +5,8 @@ export const HeaderOnly = (props) => {
   const {children} = props;
   return (
     <>
-      <div style={{height: 50px, color: #00ff00;}}/>
-      <SContainer>children</SContainer>
+      <div style={{height: "50px", backgroundColor: "red"}}/>
+      <SContainer>{children}</SContainer>
     </>
   );
 };
